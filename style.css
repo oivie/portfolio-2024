@@ -1,0 +1,423 @@
+/* FONT IMPORT START */
+body, button, input, textarea {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400; 
+}
+/* FONT IMPORT END */
+/* --------------- */
+/*  */
+/*  */
+/* BASE STYLES START */
+body {
+    /* background-color: #100f24; */
+    /* background: linear-gradient(to right, #100f24, #232238); */
+    color: #fff;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+
+    background: linear-gradient(-45deg, #100f24, #232238, #282846, #1e1e2f);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* BASE STYLES END */
+/* --------------- */
+/*  */
+/*  */
+/* PARALLAX SECTION STYLES START */
+.parallax-section {
+    /* background-image: radial-gradient(circle at 50% 50%, #232238, #100f24 70%); */
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .parallax-layer {
+        background-attachment: scroll; /* Disable parallax effect on mobile */
+    }
+}
+/* PARALLAX SECTION STYLES END */
+/*  */
+/*  */
+/*  */
+/* NAVBAR STYLES START */
+.navbar {
+    background-color: #100f24;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    /* position: fixed; */
+    top: 0;
+    left: 50%; /* Center the navbar */
+    transform: translateX(-50%); /* Adjust alignment to center */
+    width: auto;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 10px; /* Space between navbar items */
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #f987d6; /* Theme pink color for hover state */
+}
+
+/* Responsive navbar styles */
+@media (max-width: 768px) {
+    .navbar {
+        left: 0;
+        transform: translateX(0);
+        justify-content: center; /* Center navbar items on mobile */
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 5px 0; /* Stack items with space in between */
+    }
+}
+/* NAVBAR STYLES END */
+/*  */
+/*  */
+/*  */
+/* INTRO SECTION STYLES START */
+#main-intro {
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: flex-start; /* Align horizontally to the left */
+    height: 100vh;
+    padding-left: 20%; /* Large left padding for large screens */
+}
+
+#main-intro .content-layer {
+    max-width: 1200px;
+    width: 100%; /* Full width on smaller screens */
+}
+
+.subtitle {
+    color: #f987d6;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.intro-text {
+    color: #ccc;
+    font-weight: 200; 
+    font-size: 1.25rem;
+    max-width: 600px;
+}
+
+#moving-txt {
+    color: #f987d6;
+    white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+    #main-intro {
+        padding-left: 5%; /* Smaller left padding for small screens */
+    }
+
+    .title {
+        font-size: 5vw; /* Responsive font size */
+    }
+
+    .intro-text {
+        font-size: 4vw; /* Responsive font size */
+    }
+}
+/* INTRO SECTION STYLES END */
+/*  */
+/*  */
+#about-me .content-layer.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 10%; 
+    color: #fff;
+}
+
+.about-text {
+    max-width: 60%; /* Adjust width as needed */
+}
+
+.about-text p {
+    font-size: 0.95rem; /* Smaller font size for paragraphs */
+    margin-bottom: 1rem; /* Spacing between paragraphs */
+    line-height: 1.5;
+    color: #fff;
+}
+
+.about-image img {
+    max-width: 85%; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 5%; /* Space between text and image */
+}
+
+.about-text strong {
+    color: #c3b1e1;
+    font-weight: 600; /* Bolder text for emphasis */
+}
+
+.skills p {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.v-icon {
+    color: #c3b1e1; /* Theme pink color for icons */
+    margin-right: 10px;
+    font-size: 1.2rem; /* Larger size for the check icon */
+    font-weight: bold;
+}
+
+.about-image img {
+    border-radius: 10%;
+    width: 200px; /* Example fixed width, adjust as needed */
+    height: auto;
+    margin-right: 5%; /* Space between text and image */
+}
+
+.about-image img {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+@media (max-width: 768px) {
+    #about-me .content-layer.about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        order: 2; /* Text below image on mobile */
+    }
+
+    .about-image {
+        max-width: 100%;
+        order: 1; /* Image above text on mobile */
+        margin-bottom: 2rem;
+    }
+
+    .about-image img {
+        max-width: 80%;
+        margin-left: 0; /* Align image center on mobile */
+        margin: auto;
+    }
+}
+
+
+/*  */
+/*  */
+/* PORTFOLIO STYLES START */
+#portfolio {
+    padding: 5% 10%;
+    color: #fff;
+}
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-in-out;
+    background-color: #19182d;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.portfolio-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.portfolio-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.portfolio-buttons {
+    margin-top: 1rem;
+}
+
+.portfolio-buttons .btn {
+    margin-right: 1rem;
+    width: 8rem;
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
+}
+
+.portfolio-image img {
+    border-radius: 2%; 
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.2); 
+}
+
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-direction: column;
+        align-items: center; /* Center align the items for a neat look */
+        text-align: center; /* Center the text alignment */
+    }
+
+    .portfolio-item:hover .portfolio-image img {
+        transform: scale(1.1); 
+    }
+    
+
+    .portfolio-image img {
+        width: 85%; /* Larger relative width for better visibility */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 1rem; /* Space between image and content */
+    }
+
+    .portfolio-content {
+        padding-right: 0; /* Remove padding on the right for full width use */
+        margin-bottom: 1rem; /* Space between content and buttons */
+        width: 100%; /* Use full width for text and buttons */
+    }
+
+    .portfolio-buttons .btn {
+        width: auto; /* Allow button width to auto adjust */
+        padding: 10px 20px; /* Increase padding for better tap targets */
+    }
+}
+
+/* Skill tags styles */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background-color: #232238;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-tag:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Ensure buttons and tags don't interfere */
+.portfolio-buttons .btn {
+    margin-top: 1rem;
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.portfolio-buttons .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .skills {
+        justify-content: center;
+    }
+
+    .skill-tag {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .portfolio-buttons .btn {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* PORTFOLIO STYLES END */
+
+/*  */
+/*  */
+/* FOOTER STYLES START */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #19182d; /* Dark background for footer */
+}
+/* FOOTER STYLES END */
+/*  */
+/*  */
+/* GENERAL ICON STYLES START */
+.intro-icons img {
+    height: 50px;
+    margin: 0 10px;
+}
+/* GENERAL ICON STYLES END */
+
