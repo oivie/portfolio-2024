@@ -16,14 +16,26 @@ body {
     overflow-x: hidden; /* Prevents horizontal scroll */
 
     background: linear-gradient(-45deg, #100f24, #232238, #282846, #1e1e2f);
-    background-size: 400% 400%;
+    /* background-size: 400% 400%; */
     animation: gradientBG 15s ease infinite;
+
+    background-size: cover; /* Ensure the background fully covers the body */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
 }
+
 
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+html, body {
+    width: 100%; /* Ensures that the width covers the full viewport */
+    height: 100%; /* Ensures that the height covers the full viewport */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 
