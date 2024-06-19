@@ -72,7 +72,7 @@
 // // -------- INTRO TYPING START --------
 // 'Full Stack Developer'
 new TypeIt("#moving-txt", {
-    strings: ['Full Stack Developer '],
+    strings: ['Full-Stack Developer '],
     startDelay: 250,
     speed: 150,
     loop: true,
