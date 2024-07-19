@@ -4,25 +4,14 @@ body, button, input, textarea {
     font-weight: 400; 
 }
 /* FONT IMPORT END */
-/* --------------- */
-/*  */
-/*  */
 /* BASE STYLES START */
 body {
-    /* background-color: #100f24; */
-    /* background: linear-gradient(to right, #100f24, #232238); */
     color: #fff;
     margin: 0;
-    overflow-x: hidden; /* Prevents horizontal scroll */
-
+    overflow-x: hidden;
     background: linear-gradient(-45deg, #100f24, #232238, #282846, #1e1e2f);
-    /* background-size: 400% 400%; */
     animation: gradientBG 15s ease infinite;
-
-    background-size: cover; /* Ensure the background fully covers the body */
-    background-attachment: fixed; /* Keeps the background fixed during scrolling */
 }
-
 
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
@@ -31,21 +20,16 @@ body {
 }
 
 html, body {
-    width: 100%; /* Ensures that the width covers the full viewport */
-    height: 100%; /* Ensures that the height covers the full viewport */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    overflow-x: hidden; /* Prevents horizontal scroll */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
-
-
 /* BASE STYLES END */
-/* --------------- */
-/*  */
-/*  */
+
 /* PARALLAX SECTION STYLES START */
 .parallax-section {
-    /* background-image: radial-gradient(circle at 50% 50%, #232238, #100f24 70%); */
     position: relative;
     overflow: hidden;
     min-height: 100vh;
@@ -63,82 +47,63 @@ html, body {
 
 @media (max-width: 768px) {
     .parallax-layer {
-        background-attachment: scroll; /* Disable parallax effect on mobile */
+        background-attachment: scroll;
     }
 }
 /* PARALLAX SECTION STYLES END */
-/*  */
-/*  */
-/*  */
+
 /* NAVBAR STYLES START */
 .navbar {
     background-color: #100f24;
     color: #fff;
     display: flex;
-    align-items: center;
+    justify-content: center; /* Center the navbar content */
     padding: 1rem;
-    /* position: fixed; */
-    top: 0;
-    left: 50%; /* Center the navbar */
-    transform: translateX(-50%); /* Adjust alignment to center */
-    width: auto;
+    width: 100%;
     background-color: transparent;
     z-index: 10;
 }
 
 .navbar-nav {
     display: flex;
-    align-items: center;
-}
-
-.nav-item {
-    margin: 0 10px; /* Space between navbar items */
+    justify-content: center; /* Center the navbar links */
 }
 
 .nav-link {
     color: #fff;
     text-decoration: none;
+    margin: 0 10px; /* Add spacing between links */
     transition: color 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #f987d6; /* Theme pink color for hover state */
+    color: #f987d6;
 }
 
-/* Responsive navbar styles */
 @media (max-width: 768px) {
-    .navbar {
-        left: 0;
-        transform: translateX(0);
-        justify-content: center; /* Center navbar items on mobile */
-    }
-
     .navbar-nav {
-        flex-direction: column;
+        flex-direction: column; /* Stack links vertically on mobile */
         align-items: center;
     }
 
-    .nav-item {
-        margin: 5px 0; /* Stack items with space in between */
+    .nav-link {
+        margin: 5px 0; /* Space between links on mobile */
     }
-}
-/* NAVBAR STYLES END */
-/*  */
-/*  */
-/*  */
+}/* NAVBAR STYLES END */
+
 /* INTRO SECTION STYLES START */
 #main-intro {
     display: flex;
-    align-items: center; /* Align vertically */
-    justify-content: flex-start; /* Align horizontally to the left */
+    align-items: center;
+    justify-content: flex-start;
     height: 100vh;
-    padding-left: 20%; /* Large left padding for large screens */
+    padding-left: 20%;
 }
 
 #main-intro .content-layer {
     max-width: 1200px;
-    width: 100%; /* Full width on smaller screens */
+    width: 100%;
 }
 
 .subtitle {
@@ -164,23 +129,22 @@ html, body {
     white-space: nowrap;
 }
 
-
 @media (max-width: 768px) {
     #main-intro {
-        padding-left: 5%; /* Smaller left padding for small screens */
+        padding-left: 5%;
     }
 
     .title {
-        font-size: 5vw; /* Responsive font size */
+        font-size: 5vw;
     }
 
     .intro-text {
-        font-size: 4vw; /* Responsive font size */
+        font-size: 4vw;
     }
 }
 /* INTRO SECTION STYLES END */
-/*  */
-/*  */
+
+/* ABOUT PAGE START */
 #about-me .content-layer.about {
     display: flex;
     align-items: center;
@@ -190,25 +154,25 @@ html, body {
 }
 
 .about-text {
-    max-width: 60%; /* Adjust width as needed */
+    max-width: 60%;
 }
 
 .about-text p {
-    font-size: 0.95rem; /* Smaller font size for paragraphs */
-    margin-bottom: 1rem; /* Spacing between paragraphs */
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
     line-height: 1.5;
     color: #fff;
 }
 
 .about-image img {
-    max-width: 85%; /* Adjust image width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 5%; /* Space between text and image */
+    max-width: 85%;
+    height: auto;
+    margin-left: 5%;
 }
 
 .about-text strong {
     color: #c3b1e1;
-    font-weight: 600; /* Bolder text for emphasis */
+    font-weight: 600;
 }
 
 .skills p {
@@ -220,24 +184,22 @@ html, body {
 }
 
 .v-icon {
-    color: #c3b1e1; /* Theme pink color for icons */
+    color: #c3b1e1;
     margin-right: 10px;
-    font-size: 1.2rem; /* Larger size for the check icon */
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .about-image img {
     border-radius: 10%;
-    width: 200px; /* Example fixed width, adjust as needed */
+    width: 200px;
     height: auto;
-    margin-right: 5%; /* Space between text and image */
+    margin-right: 5%;
 }
 
 .about-image img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-
 
 @media (max-width: 768px) {
     #about-me .content-layer.about {
@@ -247,25 +209,23 @@ html, body {
 
     .about-text {
         max-width: 100%;
-        order: 2; /* Text below image on mobile */
+        order: 2;
     }
 
     .about-image {
         max-width: 100%;
-        order: 1; /* Image above text on mobile */
+        order: 1;
         margin-bottom: 2rem;
     }
 
     .about-image img {
         max-width: 80%;
-        margin-left: 0; /* Align image center on mobile */
+        margin-left: 0;
         margin: auto;
     }
 }
+/* ABOUT PAGE END */
 
-
-/*  */
-/*  */
 /* PORTFOLIO STYLES START */
 #portfolio {
     padding: 5% 10%;
@@ -327,39 +287,35 @@ html, body {
     transform: scale(1.2); 
 }
 
-
-/* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
     .portfolio-item {
         flex-direction: column;
-        align-items: center; /* Center align the items for a neat look */
-        text-align: center; /* Center the text alignment */
+        align-items: center;
+        text-align: center;
     }
 
     .portfolio-item:hover .portfolio-image img {
         transform: scale(1.1); 
     }
-    
 
     .portfolio-image img {
-        width: 85%; /* Larger relative width for better visibility */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 1rem; /* Space between image and content */
+        width: 85%;
+        height: auto;
+        margin-bottom: 1rem;
     }
 
     .portfolio-content {
-        padding-right: 0; /* Remove padding on the right for full width use */
-        margin-bottom: 1rem; /* Space between content and buttons */
-        width: 100%; /* Use full width for text and buttons */
+        padding-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
     }
 
     .portfolio-buttons .btn {
-        width: auto; /* Allow button width to auto adjust */
-        padding: 10px 20px; /* Increase padding for better tap targets */
+        width: auto;
+        padding: 10px 20px;
     }
 }
 
-/* Skill tags styles */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -382,7 +338,6 @@ html, body {
     color: #fff;
 }
 
-/* Ensure buttons and tags don't interfere */
 .portfolio-buttons .btn {
     margin-top: 1rem;
     pointer-events: auto;
@@ -412,24 +367,59 @@ html, body {
         margin-bottom: 0.5rem;
     }
 }
-
 /* PORTFOLIO STYLES END */
 
-/*  */
-/*  */
 /* FOOTER STYLES START */
-footer {
-    padding: 2rem;
+.simple-footer {
+    background-color: transparent; /* Ensure the footer background is transparent */
+    padding: 20px 0;
+    margin-top: 20px;
     text-align: center;
-    background-color: #19182d; /* Dark background for footer */
+    position: relative;
+    font-size: 1rem;
 }
-/* FOOTER STYLES END */
-/*  */
-/*  */
-/* GENERAL ICON STYLES START */
-.intro-icons img {
-    height: 50px;
-    margin: 0 10px;
+
+.simple-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px; /* Adjust the width of the line */
+    height: 2px; /* Adjust the height of the line */
+    background-color: #f987d6; /* Line color */
 }
+
+.text-secondary {
+    color: #f987d6; /* Text color */
+    font-size: 1rem;
+    font-weight: 500; /* Slightly bolder text */
+}
+/* FOOTER STYLES START */
 /* GENERAL ICON STYLES END */
 
+/* BLOBS STYLES START */
+.blob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #8d5cff; /* Complimentary color 1 */
+    border-radius: 50%;
+    filter: blur(75px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.blob.blob2 {
+    background-color: #3995ff; /* Complimentary color 2 */
+}
+
+.blob-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Allow interactions through the blobs */
+}
+/* BLOBS STYLES END */
