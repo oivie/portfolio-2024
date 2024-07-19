@@ -11,6 +11,7 @@ body {
     overflow-x: hidden;
     background: linear-gradient(-45deg, #100f24, #232238, #282846, #1e1e2f);
     animation: gradientBG 15s ease infinite;
+    background-attachment: fixed; 
 }
 
 @keyframes gradientBG {
@@ -391,7 +392,7 @@ html, body {
 }
 
 .text-secondary {
-    color: #f987d6; /* Text color */
+    color: #f987d6;
     font-size: 1rem;
     font-weight: 500; /* Slightly bolder text */
 }
