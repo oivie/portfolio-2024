@@ -1,12 +1,24 @@
 // TypeIt for moving text
 new TypeIt("#moving-txt", {
-    strings: ['Full-Stack Developer '],
+    strings: [
+        'Full-Stack Developer',
+        'Machine Learning Engineer',
+        'Data Scientist',
+        'Software Engineer',
+        'AI Enthusiast',
+        'Web Developer',
+        'Front-End Developer',
+        'Back-End Developer'
+    ],
     startDelay: 250,
     speed: 150,
     loop: true,
-    loopDelay: 100,
+    loopDelay: 1500, // Delay before restarting
     waitUntilVisible: true,
-}).pause(2500).go();
+    nextStringDelay: [1500, 500], // Delay before typing the next string
+    breakLines: false // Prevent line breaks for strings
+}).go();
+
 
 // GSAP for animations
 gsap.registerPlugin(ScrollTrigger);
