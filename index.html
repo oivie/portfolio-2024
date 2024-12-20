@@ -20,6 +20,8 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-md navbar-dark">
                 <div class="navbar-nav mx-auto">
+                    <a class="nav-link" href="#portfolio-development">Portfolio: Development</a>
+                    <a class="nav-link" href="#portfolio-ml">Portfolio: ML & Big Data</a>
                     <a class="nav-link" href="https://github.com/oivie" target="_blank">GitHub
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
@@ -44,7 +46,7 @@
             <div class="intro-content">
                 <p class="subtitle">— HI THERE</p>
                 <h1 class="title">I am Elena<br><span id="moving-txt"></span></h1>
-                <p class="intro-text">Full Stack Developer | React | NodeJs | NextJS | MongoDB | Web3 | Blockchain | TypeScript | C# | Python | Rust | Solana | AI Enthusiast</p>
+                <p class="intro-text">Full Stack Developer | React | Angular | Node.js | Next.js | Web2 & Web3 | Blockchain | TypeScript | C# | Python | AI Enthusiast</p>
             </div>
         </div>
     </header>
@@ -76,10 +78,10 @@
     <!-- ABOUT PAGE END -->
 
 
-<section id="portfolio" class="parallax-section">
+<section id="portfolio-development" class="parallax-section">
     <div class="parallax-layer" style="background-image: url('');"></div>
     <div class="content-layer">
-        <h2 class="subtitle">— PORTFOLIO: DEVELOPMENT</h2>
+        <h2  class="subtitle">— PORTFOLIO: DEVELOPMENT</h2>
 
         <!-- Crypto Board Project -->
         <div class="portfolio-item">
@@ -251,7 +253,7 @@
     </section>
 
     <!-- PORTFOLIO ML -->
-    <section id="portfolio" class="parallax-section">
+    <section id="portfolio-ml" class="parallax-section">
         <div class="parallax-layer" style="background-image: url('');"></div>
         <div class="content-layer">
             <h2 class="subtitle">— PORTFOLIO: ML & BIG DATA</h2>
@@ -351,30 +353,154 @@
                 <img src="img/portfolio/matrix.png" alt="Human Activity Recognition img">
             </div>
         </div>
-    
-            <div class="portfolio-item">
-                <div class="portfolio-content">
-                    <h3>Data Science & Machine Learning</h3>
-                    <p>
-                        Passionate about machine learning and data analytics, constantly learning new technologies. 
-                    </p>
-                    <div class="skills">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Plotly</span>
-                        <span class="skill-tag">Seaborn</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                    </div>
-                    <div class="portfolio-buttons">
-                        <a href="https://github.com/oivie/Data-Science-Machine-Learning" class="btn btn-outline-light" target="_blank">GitHub</a>
-                    </div>
+
+        <!-- item OdjDetection-->
+        <div class="portfolio-item">
+            <div class="portfolio-content">
+                <h3>Object Detection Using Faster R-CNN</h3>
+                <p>
+                    Developed and evaluated an object detection pipeline using PyTorch's Faster R-CNN model. The project focuses on bounding box prediction, Intersection over Union (IoU), and performance metrics like precision, recall, and F1 score.
+                </p>
+                <ul>
+                    <li>Trained and fine-tuned Faster R-CNN for detecting objects in images with COCO-pretrained weights.</li>
+                    <li>Achieved high IoU values for key predictions, showcasing the model's ability to locate objects accurately.</li>
+                    <li>Implemented metrics to evaluate model performance: Precision (1.0), Recall (1.0), and F1 Score (1.0).</li>
+                    <li>Utilized PyTorch and torchvision for efficient model integration and inference.</li>
+                </ul>
+                <div class="skills">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Torchvision</span>
+                    <span class="skill-tag">Faster R-CNN</span>
+                    <span class="skill-tag">Object Detection</span>
+                    <span class="skill-tag">COCO Dataset</span>
                 </div>
-                <div class="portfolio-image">
-                    <img src="img/portfolio/ml.webp" alt="ml img">
+                <div class="portfolio-buttons">
+                    <a href="https://drive.google.com/file/d/1HM7TcLJ1V1vngjXZSDZma54Zd-mCiaS4/view?usp=sharing" class="btn btn-outline-light" target="_blank">Code</a>
+                    <a href="https://drive.google.com/file/d/1ng0RzR84PcoaUG0IeQ8IkRo7gxqcc15s/view?usp=sharing" class="btn btn-outline-light" target="_blank">Report</a>
                 </div>
             </div>
+            <div class="portfolio-image">
+                <img src="img/portfolio/dog.png" alt="Object Detection img">
+            </div>
+        </div>
+
+    <!-- item RCNN -->
+        <div class="portfolio-item">
+            <div class="portfolio-content">
+                <h3>Object Detection Using Faster R-CNN</h3>
+                <p>
+                    Developed and evaluated an object detection pipeline using PyTorch's Faster R-CNN model. The project focuses on bounding box prediction, Intersection over Union (IoU), and performance metrics like precision, recall, and F1 score.
+                </p>
+                <ul>
+                    <li>Trained and fine-tuned Faster R-CNN for detecting objects in images with COCO-pretrained weights.</li>
+                    <li>Achieved high IoU values for key predictions, showcasing the model's ability to locate objects accurately.</li>
+                    <li>Implemented metrics to evaluate model performance: Precision (1.0), Recall (1.0), and F1 Score (1.0).</li>
+                    <li>Utilized PyTorch and torchvision for efficient model integration and inference.</li>
+                </ul>
+                <div class="skills">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Torchvision</span>
+                    <span class="skill-tag">Faster R-CNN</span>
+                    <span class="skill-tag">Object Detection</span>
+                    <span class="skill-tag">COCO Dataset</span>
+                </div>
+                <div class="portfolio-buttons">
+                    <a href="https://drive.google.com/file/d/1V9e9YTReMWQ63fPqmG8LWdr2pEWP54mS/view?usp=sharing" class="btn btn-outline-light" target="_blank">Code</a>
+                    <a href="https://drive.google.com/file/d/1vldWz2b_u4K82L4NPnujvszKJAUFLF3Q/view?usp=sharing" class="btn btn-outline-light" target="_blank">Report</a>
+                </div>
+            </div>
+            <div class="portfolio-image">
+                <img src="img/portfolio/rcnn.png" alt="Object Detection img">
+            </div>
+        </div>
+
+        <!-- item R Sleep Health Dashboard -->
+        <div class="portfolio-item">
+            <div class="portfolio-content">
+                <h3>Sleep Health and Lifestyle Analysis Dashboard</h3>
+                <p>
+                    An interactive Shiny dashboard group project analyzing the relationship between sleep patterns, lifestyle factors, and health outcomes. The analysis is based on the Sleep Health and Lifestyle dataset from Kaggle, utilizing R and machine learning techniques to uncover actionable insights.
+                </p>
+                <ul>
+                    <li>Explored correlations between physical activity, stress, and sleep quality through interactive visualizations.</li>
+                    <li>Developed machine learning models to predict BMI categories with an 83% accuracy rate.</li>
+                    <li>Implemented filters and side-by-side analysis for in-depth exploration of key health metrics.</li>
+                    <li>Created visualizations, including scatter plots, heatmaps, and box plots, to uncover trends.</li>
+                </ul>
+                <div class="skills">
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">Shiny</span>
+                    <span class="skill-tag">Data Analytics</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Health Data</span>
+                    <span class="skill-tag">Interactive Dashboard</span>
+                </div>
+                <div class="portfolio-buttons">
+                    <!-- <a href="https://your-live-dashboard-link-here.com" class="btn btn-outline-light" target="_blank">Demo</a> -->
+                    <a href="https://drive.google.com/file/d/1IDvB9ig1tQk7RmxXjHjfueebaBqSTWP7/view?usp=sharing" class="btn btn-outline-light" target="_blank">Report</a>
+                </div>
+            </div>
+            <div class="portfolio-image">
+                <img src="img/portfolio/r.png" alt="Sleep Health Analysis Dashboard">
+            </div>
+        </div>
+
+        <!-- item 1 - Vaccination Effectiveness Analysis -->
+        <div class="portfolio-item">
+            <div class="portfolio-content">
+                <h3>Analyzing the Effectiveness of Vaccination Campaigns in Reducing COVID-19 Deaths</h3>
+                <p>
+                    This group project evaluates the global impact of COVID-19 vaccination campaigns on reducing death rates. Using the Our World in Data dataset, the project analyzes vaccination trends, performs machine learning predictions, and uncovers insights for public health strategies.
+                </p>
+                <ul>
+                    <li>Conducted data cleaning and exploratory data analysis on COVID-19 cases, deaths, and vaccination rates.</li>
+                    <li>Applied machine learning models (Linear Regression, Decision Tree Regressor, Random Forest, K Neighbors Regressor) to predict death-to-case ratios.</li>
+                    <li>Visualized vaccination trends and their correlation with reduced mortality through advanced visualizations.</li>
+                    <li>Highlighted actionable insights for public health policies to mitigate the impact of the pandemic.</li>
+                </ul>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Google Colab</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">COVID-19 Data</span>
+                    <span class="skill-tag">Data Visualization</span>
+                </div>
+                <div class="portfolio-buttons">
+                    <a href="https://drive.google.com/file/d/1HGdPoD6oskERDfjUpTRLbn1p3DUmUDd9/view?usp=sharing" class="btn btn-outline-light" target="_blank">Report</a>
+                </div>
+            </div>
+            <div class="portfolio-image">
+                <img src="img/portfolio/covid.png" alt="Vaccination Effectiveness Analysis">
+            </div>
+        </div>
+
+
+        <div class="portfolio-item">
+            <div class="portfolio-content">
+                <h3>Data Science & Machine Learning</h3>
+                <p>
+                    Exploring the world of data through machine learning and analytics, driven by a passion for discovering insights and solving complex problems. Check more of my Projects on GitHub.
+                </p>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Plotly</span>
+                    <span class="skill-tag">Seaborn</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                </div>
+                <div class="portfolio-buttons">
+                    <a href="https://github.com/oivie/Data-Science-Machine-Learning" class="btn btn-outline-light" target="_blank">GitHub</a>
+                    <!-- <a href="https://elena-pashkova.vercel.app/machine-learning" class="btn btn-outline-light" target="_blank">Check More</a> -->
+                </div>
+            </div>
+            <div class="portfolio-image">
+                <img src="img/portfolio/ml.webp" alt="Machine Learning Project Image">
+            </div>
+        </div>
+        
+
         </section>
     <!-- PORTFOLIO END -->
 

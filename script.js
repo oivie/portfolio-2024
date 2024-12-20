@@ -32,8 +32,11 @@ gsap.from("#main-intro h1", { duration: 1.5, y: -100, opacity: 0, ease: "bounce"
 // Animate elements in the About Me section
 gsap.from("#about-me h2", { duration: 1, x: -100, opacity: 0, scrollTrigger: "#about-me" });
 
+
 // Portfolio items animation
-gsap.from("#portfolio h2", { duration: 1, x: 100, opacity: 0, scrollTrigger: "#portfolio" });
+gsap.from("#portfolio-dev h2", { duration: 1, x: 100, opacity: 0, scrollTrigger: "#portfolio-dev" });
+
+gsap.from("#portfolio-ml h2", { duration: 1, x: 100, opacity: 0, scrollTrigger: "#portfolio-ml" });
 
 gsap.utils.toArray(".portfolio-item").forEach(item => {
     gsap.from(item, {
@@ -48,6 +51,7 @@ gsap.utils.toArray(".portfolio-item").forEach(item => {
         }
     });
 });
+
 
 // Blobs animation
 const blobs = document.querySelectorAll('.blob');
