@@ -1,23 +1,27 @@
 // TypeIt for moving text
 new TypeIt("#moving-txt", {
     strings: [
-        'Full-Stack Developer',
-        'Machine Learning Engineer',
-        'Data Scientist',
-        'Software Engineer',
-        'AI Enthusiast',
-        'Web Developer',
-        'Front-End Developer',
-        'Back-End Developer'
+        'Full-Stack Developer ', // Always first
+        'Machine Learning Engineer ',
+        'Data Scientist ',
+        'Software Engineer ',
+        'AI Enthusiast ',
+        'Web Developer ',
+        'Front-End Developer ',
+        'Back-End Developer '
     ],
     startDelay: 250,
-    speed: 150,
+    speed: 250,
     loop: true,
-    loopDelay: 1500, // Delay before restarting
+    loopDelay: 2000, // Delay before restarting the loop
     waitUntilVisible: true,
-    nextStringDelay: [1500, 500], // Delay before typing the next string
-    breakLines: false // Prevent line breaks for strings
+    breakLines: false, // Prevent line breaks
+    afterComplete: (instance) => {
+        // Ensure "Full-Stack Developer" is always the first string on restart
+        instance.reset().go();
+    }
 }).go();
+
 
 
 // GSAP for animations

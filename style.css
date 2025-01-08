@@ -67,8 +67,10 @@ html, body {
     padding: 1rem;
     width: 100%;
     background-color: transparent;
-    z-index: 10;
+    z-index: 1000;
 }
+
+
 
 .navbar-nav {
     display: flex;
