@@ -190,7 +190,11 @@ body {
     }
 
     .title {
-        font-size: 5vw;
+        font-size: 1.5rem;
+    }
+
+    #moving-txt {
+        font-size: 2rem;
     }
 
     .intro-text {

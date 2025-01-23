@@ -1,8 +1,8 @@
 // TypeIt for moving text
 new TypeIt("#moving-txt", {
     strings: [
-        'Full-Stack Developer ', // Always first
-        'Machine Learning Engineer ',
+        'Full Stack Developer ', // Always first
+        'ML Engineer ',
         'Data Scientist ',
         'Software Engineer ',
         'AI Enthusiast ',
