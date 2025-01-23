@@ -26,12 +26,12 @@ html {
 
 
 html, body {
-    width: 100%;
-    height: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    width: 100%;
 }
+
 /* BASE STYLES END */
 
 /* PARALLAX SECTION STYLES START */
@@ -59,46 +59,93 @@ html, body {
 /* PARALLAX SECTION STYLES END */
 
 /* NAVBAR STYLES START */
+.parallax-section, .navbar {
+    max-width: 100vw; /* Prevent sections from exceeding viewport width */
+    overflow: hidden;
+}
+
 .navbar {
-    background-color: #100f24;
+    background:  #282846,; /* Semi-transparent to blend */
     color: #fff;
-    display: flex;
-    justify-content: center; /* Center the navbar content */
     padding: 1rem;
-    width: 100%;
-    background-color: transparent;
     z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(20px); /* Add blur for elegance */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduce shadow intensity */
 }
 
 
+body {
+    margin-top: 80px; /* Add space for the fixed navbar */
+}
+
+.navbar-brand {
+    font-size: 1rem;
+    /* font-weight: bold; */
+    /* color: #f987d6; */
+    text-transform: uppercase;
+}
 
 .navbar-nav {
     display: flex;
-    justify-content: center; /* Center the navbar links */
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-link {
+    font-size: 1rem;
+    font-weight: 400;
     color: #fff;
     text-decoration: none;
-    margin: 0 10px; /* Add spacing between links */
     transition: color 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-    color: #f987d6;
+.nav-link:hover {
+    color: #f987d6; /* Highlight color */
 }
 
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2888, 87, 86, 0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-collapse {
+        background-color: #100f24;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
     .navbar-nav {
-        flex-direction: column; /* Stack links vertically on mobile */
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .nav-link {
-        margin: 5px 0; /* Space between links on mobile */
+        padding: 0.5rem 0;
+        width: 100%;
     }
-}/* NAVBAR STYLES END */
+}
+/* NAVBAR STYLES END */
+
+#main-intro,
+#about-me,
+#education-certifications,
+#portfolio-development,
+#portfolio-ml {
+    padding-top: 100px; /* Adjust based on navbar height */
+}
 
 /* INTRO SECTION STYLES START */
 #main-intro {
@@ -233,6 +280,82 @@ html, body {
     }
 }
 /* ABOUT PAGE END */
+
+
+/* EDUCATION & CERTIFICATIONS STYLES */
+.combined-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.subsection {
+    width: 45%;
+    text-align: left;
+}
+
+.subsection h3 {
+    font-size: 1.8rem;
+    color: #c3b1e1;
+    margin-bottom: 1rem;
+}
+
+.item {
+    /* background-color: #282846; */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.item p {
+    font-size: 1rem;
+    color: #bbb;
+    margin: 5px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .combined-container {
+        flex-direction: column;
+    }
+
+    .subsection {
+        width: 100%;
+    }
+
+    .item {
+        margin-bottom: 20px;
+    }
+}
+
+.cert-link {
+    display: block; /* Makes the link take a new line */
+    margin-top: 0.5rem; /* Add space between the paragraph and the link */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #f987d6; /* Highlight color to match theme */
+    text-decoration: none; /* Remove underline for cleaner look */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.cert-link:hover {
+    color: #fff; /* Changes link color on hover */
+    text-decoration: underline; /* Optional hover effect */
+}
+/* Education ENDs*/
+
 
 /* PORTFOLIO STYLES START */
 #portfolio {
