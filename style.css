@@ -65,7 +65,7 @@ html, body {
 }
 
 .navbar {
-    background:  #282846,; /* Semi-transparent to blend */
+    background:  #282846; 
     color: #fff;
     padding: 1rem;
     z-index: 1000;
@@ -122,7 +122,7 @@ body {
     }
 
     .navbar-collapse {
-        background-color: #100f24;
+        background-color: #282846;
         padding: 1rem;
         border-radius: 10px;
     }
