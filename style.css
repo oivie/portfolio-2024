@@ -65,7 +65,7 @@ html, body {
 }
 
 .navbar {
-    background:  #282846; 
+    /* background:  #282846,; Semi-transparent to blend */
     color: #fff;
     padding: 1rem;
     z-index: 1000;
